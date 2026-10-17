@@ -35,7 +35,7 @@ local ICONS = {
 	home = Vector2.new(964, 205),
 }
 local MINIMIZE_ICON = "rbxassetid://10002398990"
-local HUB_ICON = "rbxassetid://0" -- TROCAR pelo ID do ícone do hub 564
+local HUB_ICON = "rbxassetid://92076302561894"
 
 local THEME = {
 	Background = Color3.fromRGB(0, 0, 0),
