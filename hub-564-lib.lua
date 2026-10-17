@@ -233,14 +233,17 @@ function Library:AddWindow(title, subtitle, configId)
 		TextXAlignment = Enum.TextXAlignment.Right,
 	})
 
-	self.MinButton = create("ImageButton", {
+	self.MinButton = create("TextButton", {
 		Parent = self.Header,
 		AnchorPoint = Vector2.new(1, 0.5),
 		Position = UDim2.new(1, -46, 0.5, 0),
 		Size = UDim2.fromOffset(30, 30),
 		BackgroundTransparency = 1,
-		Image = MINIMIZE_ICON,
-		ScaleType = Enum.ScaleType.Fit,
+		Font = FONTB,
+		Text = "–",
+		TextColor3 = THEME.Text,
+		TextSize = 22,
+		AutoButtonColor = false,
 	})
 
 	self.CloseButton = create("TextButton", {
@@ -682,7 +685,7 @@ function Section:AddToggle(text, default, callback)
 	local function render(animate)
 		TweenService:Create(knob, TweenInfo.new(animate and 0.15 or 0), {
 			Position = UDim2.new(value and 0.75 or 0.25, 0, 0.5, 0),
-			BackgroundColor3 = value and THEME.Main or THEME.Hover,
+			BackgroundColor3 = value and THEME.Main or Color3.fromRGB(194, 194, 194),
 		}):Play()
 	end
 	render(false)
